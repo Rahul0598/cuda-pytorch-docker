@@ -12,7 +12,7 @@
 
 ORGANIZATION=$(shell echo $${ORGANIZATION:-openkbs})
 PROJECT=$(shell echo $${PROJECT:-dev})
-APPLICATION_NAME=$(shell echo $${PWD\#\#*/})
+APPLICATION_NAME=p556
 
 APP_VERSION=$(shell echo $${APP_VERSION:-latest})
 # APP_VERSION=$(shell echo $${APP_VERSION:-1.0.0})
@@ -53,8 +53,7 @@ rmi:
 	docker rmi -f $$(docker images -f dangling=true -q)
 
 build:
-	docker build \
-	-t $(imageTag):latest .
+	docker build -t $(imageTag):latest .
 
 push: build
 	#docker tag $(imageTag):$(VERSION) $(REGISTRY_IMAGE):$(VERSION)

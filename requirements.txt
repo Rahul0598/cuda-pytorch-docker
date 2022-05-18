@@ -2,7 +2,8 @@
 pyyaml>=5.1
 
 # Jupyter Editor Auto-complete
-#jupyter-tabnine
+jupyter-tabnine
+jupyterlab
 ipython>=8.2.0
 jedi
 robotkernel
